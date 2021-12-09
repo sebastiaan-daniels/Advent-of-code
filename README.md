@@ -8,7 +8,7 @@ My attempt at this years Advent of Code!
 # day 5: **
 # day 6: **
 # day 7: **
-# day 8:
+# day 8: *
 # day 9:
 # day 10:
 # day 11:
