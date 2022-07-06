@@ -1,28 +1,15 @@
-# Advent-of-code-2021
-My attempt at this years Advent of Code!
+##This repo contains all my files for each Advent of Code I've participated in.
 
-# day 1: **
-# day 2: **
-# day 3: **
-# day 4: **
-# day 5: **
-# day 6: **
-# day 7: **
-# day 8: **
-# day 9: *
-# day 10:
-# day 11:
-# day 12:
-# day 13:
-# day 14:
-# day 15:
-# day 16:
-# day 17:
-# day 18:
-# day 19:
-# day 20:
-# day 21:
-# day 22:
-# day 23:
-# day 24:
-# day 25:
+#2015:
+0 *
+#2016:
+0 *
+#2017:
+0 *
+#2018:
+0 *
+#2019:
+0 *
+#2020:
+0 *
+#2021:
