@@ -1,5 +1,6 @@
 ## This repo contains all my files for each Advent of Code I've participated in.
 
+Yes, I am committing directly to the main branch on this project, I am aware of that.
 # 2015:
 0 *
 # 2016:
