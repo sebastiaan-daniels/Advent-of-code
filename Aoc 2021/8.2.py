@@ -94,7 +94,7 @@ class segment():
 
 def main():
     #read all inputs
-    with open('inday08-1.txt','r') as f: data = [a.rstrip('\n') for a in f.readlines()]
+    with open('in8.txt','r') as f: data = [a.rstrip('\n') for a in f.readlines()]
     #make a total
     total = 0
     #loop through each line

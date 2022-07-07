@@ -1,5 +1,5 @@
 #converter from data to list
-with open('inday04-1.txt','r') as f:
+with open('in4.txt','r') as f:
     data = [k.rstrip('\n') for k in f.readlines()]
 
 #class bingo???

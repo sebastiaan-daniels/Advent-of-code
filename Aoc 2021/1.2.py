@@ -1,5 +1,5 @@
 #converter from data to list
-with open('inday01-1.txt','r') as f:
+with open('in1.txt','r') as f:
     data = [int(k.rstrip('\n')) for k in f.readlines()]
 
 list_with_sums = []

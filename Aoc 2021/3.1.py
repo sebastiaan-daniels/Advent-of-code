@@ -2,7 +2,7 @@
 from collections import Counter
 
 #converter from data to list
-with open('inday03-1.txt','r') as f:
+with open('in3.txt','r') as f:
     data = [k.rstrip('\n') for k in f.readlines()]
 
 def convert_binary(bin):

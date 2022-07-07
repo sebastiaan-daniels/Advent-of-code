@@ -1,5 +1,5 @@
 #converter from data to list
-with open('inday06-1.txt','r') as f:
+with open('in6.txt','r') as f:
     data = f.read()
     data = [int(_) for _ in data.split(',')]
 
@@ -26,9 +26,7 @@ def next_gen(old):
     new[6] += old[7]
     return new
 
-for a in range(256): #range is the # of days
+for a in range(80): #range is the # of days
     old = next_gen(old)
 
 print(sum([v for (k,v) in old.items()]))
-
-##### literally the same as 06-1 but with line 29 changed (range(80) -> range(256))

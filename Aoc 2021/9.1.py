@@ -1,5 +1,5 @@
 #step 1, read input
-with open('inday09.txt','r') as f:
+with open('in9.txt','r') as f:
     data = [_.rstrip('\n') for _ in f.readlines()]
 
 #create a totals list of low_points

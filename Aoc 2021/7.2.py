@@ -1,5 +1,5 @@
 #converter from data to list
-with open('inday07-1.txt','r') as f:
+with open('in7.txt','r') as f:
     data = [int(_) for _ in f.read().split(',')]
 
 no_dupl_data = list(dict.fromkeys(data))

@@ -1,5 +1,5 @@
 #converter from data to list
-with open('inday02-1.txt','r') as f:
+with open('in2.txt','r') as f:
     data = [k.rstrip('\n') for k in f.readlines()]
 
 cur_value = {'depth':0,'forward':0}
