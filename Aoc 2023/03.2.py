@@ -4,9 +4,13 @@ class Number():
         self.pos_x = pos_x
         self.value = value
         self.gear = None
+        self.already_scanned = False
 
     def __str__(self):
         return f"x:{self.pos_x},y:{self.pos_y},val:{self.value}"
+    
+    def __eq__(self, value):
+        return ((self.pos_x == value.pos_x) and (self.pos_y == value.pos_y)) and (self.value == value.value)
     
 
 class Gear():
@@ -62,20 +66,57 @@ class Grid():
         
 def get_gear (number: Number, grid: Grid)-> bool:
     surrounding = []
+    coordinates = []
     # left
     surrounding.extend([grid.get_Coordinate(number.pos_x-1,y) for y in range(number.pos_y-1,number.pos_y+2)])
+    coordinates.extend([(number.pos_x-1,y) for y in range(number.pos_y-1,number.pos_y+2)])
     # right
     surrounding.extend([grid.get_Coordinate(number.pos_x+len(str(number.value)),y) for y in range(number.pos_y-1,number.pos_y+2)])
+    coordinates.extend([(number.pos_x+len(str(number.value)),y) for y in range(number.pos_y-1,number.pos_y+2)])
     # up
     surrounding.extend([grid.get_Coordinate(x, number.pos_y-1) for x in range(number.pos_x,number.pos_x+len(str(number.value)))])
+    coordinates.extend([(x, number.pos_y-1) for x in range(number.pos_x,number.pos_x+len(str(number.value)))])
     # down
     surrounding.extend([grid.get_Coordinate(x, number.pos_y+1) for x in range(number.pos_x,number.pos_x+len(str(number.value)))])
-    return any([True if x not in ".0123456789" else False for x in surrounding])
+    coordinates.extend([(x, number.pos_y+1) for x in range(number.pos_x,number.pos_x+len(str(number.value)))])
+
+    val = [True if x == "*" else False for x in surrounding]
+    if any(val):
+        coords = coordinates[surrounding.index('*')]
+        return Gear(coords[1], coords[0])
     
 
 def main():
     total = 0
+    scanned_items = []
     grid = Grid([x.strip() for x in open("in03.txt", 'r').readlines()])
+    gears_nums = []
+    for number in grid.numbers:
+        if gear := get_gear(number, grid):
+            gears_nums.append((number, gear,))
+
+    for item in gears_nums:
+        ...
+        for iter in gears_nums:
+            if item[0] == iter[0]:
+                # These are the same numbers!
+                continue
+            if item[1] == iter[1]:
+                print(f"MATCH FOUND: {item} - {iter}")
+                if (item[0] in scanned_items) or (iter[0] in scanned_items):
+                    print("Already scanned!")
+                    continue
+                scanned_items.append(item[0])
+                scanned_items.append(iter[0])
+                ratio = item[0].value * iter[0].value
+                print(ratio)
+                total += ratio
+
+            else:
+                # These items don't match, continue (this is redundant code to visualise)
+                continue
+
+    print(total)
     
  
 
