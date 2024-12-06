@@ -17,16 +17,9 @@ def main():
 
     print(total)
 
-
-    
-    print(total)
-
 def get_mult(mult:str) -> int:
     return (lambda a,b: int(a)*int(b))( *mult[4:-1].split(','))
     
 
 if __name__ == "__main__":
     main()
-
-
-#
